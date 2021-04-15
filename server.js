@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
-require('dotenv').config();
+// require('dotenv').config();
 
 // const csv = require('csvtojson');
 // const Forecast = require('./models/forecast');
