@@ -1,10 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
-// require('dotenv').config();
-
-// const csv = require('csvtojson');
-// const Forecast = require('./models/forecast');
 
 mongoose.connect(
   'mongodb+srv://Torend:24882488tD@weather.pez8t.mongodb.net/weather',
