@@ -2,10 +2,6 @@ const express = require('express');
 const router = express.Router();
 const Forecast = require('../models/forecast');
 
-router.get('/', (req, res) => {
-  return res.json({ message: weather });
-});
-
 router.get('/data', async (req, res) => {
   try {
     forecastArray = await Forecast.find({
