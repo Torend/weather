@@ -4,7 +4,7 @@ const Forecast = require('../models/forecast');
 
 router.get('/data', async (req, res) => {
   try {
-    // get the forecast by lat and lon form the db
+    // get the forecast by lat and lon from the db
     forecastArray = await Forecast.find({
       Longitude: req.query.lon,
       Latitude: req.query.lat,
@@ -20,7 +20,7 @@ router.get('/data', async (req, res) => {
 
 router.get('/summarize', async (req, res) => {
   try {
-    // get the forecast by lat and lon form the db
+    // get the forecast by lat and lon from the db
     forecastArray = await Forecast.find({
       Latitude: req.query.lat,
       Longitude: req.query.lon,
@@ -29,7 +29,7 @@ router.get('/summarize', async (req, res) => {
     if (forecastArray.length == 0)
       return res.status(404).json({ message: 'Cannot find the location' });
     else {
-      // calculate min max and avg form all the results
+      // calculates min max and avg from the results
       const min = {
         Temperature: forecastArray[0].Temperature,
         Precipitation: forecastArray[0].Precipitation,
