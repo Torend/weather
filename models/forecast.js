@@ -1,7 +1,11 @@
 const mongoose = require('mongoose');
 
 const forecastSchema = new mongoose.Schema({
-  location: {
+  Longitude: {
+    type: String,
+    required: true,
+  },
+  Latitude: {
     type: String,
     required: true,
   },
